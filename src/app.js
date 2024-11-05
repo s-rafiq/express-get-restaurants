@@ -29,7 +29,7 @@ app.put("/restaurants/:id", async (req, res) => {
 })
 
 app.delete("/restaurants/:id", async (req, res) => {
-    const deleteRestaurant = await Restaurant.destroy({where: {req.params.id}})
+    const deleteRestaurant = await Restaurant.destroy({where: {id: req.params.id}})
     res.json(deleteRestaurant)
 })
 
